@@ -1,0 +1,6 @@
+com/lux/authentication/jaxrs/provider/ObjectMapperProvider.class
+com/lux/authentication/ValidateData.class
+com/lux/authentication/model/User.class
+com/lux/authentication/Main.class
+com/lux/authentication/jaxrs/application/ApplicationConfig.class
+com/lux/authentication/SaveData.class

@@ -1,0 +1,6 @@
+/home/edgar/Development/Jersey/repository/authentication-service-webapp/src/main/java/com/lux/authentication/Main.java
+/home/edgar/Development/Jersey/repository/authentication-service-webapp/src/main/java/com/lux/authentication/model/User.java
+/home/edgar/Development/Jersey/repository/authentication-service-webapp/src/main/java/com/lux/authentication/jaxrs/application/ApplicationConfig.java
+/home/edgar/Development/Jersey/repository/authentication-service-webapp/src/main/java/com/lux/authentication/SaveData.java
+/home/edgar/Development/Jersey/repository/authentication-service-webapp/src/main/java/com/lux/authentication/ValidateData.java
+/home/edgar/Development/Jersey/repository/authentication-service-webapp/src/main/java/com/lux/authentication/jaxrs/provider/ObjectMapperProvider.java

@@ -1,0 +1,5 @@
+
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(©ó–—øÿÿÿÿ
+Ysquid:CallToDeprecatedMethod",Remove this use of "stop"; it is deprecated.(ƒþ¸Œ8üÁ¾µ—+
+Osquid:S1118":Add a private constructor to hide the implicit public one.(àªÅö
