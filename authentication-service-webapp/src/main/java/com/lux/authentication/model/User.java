@@ -8,16 +8,18 @@ public class User {
 
     public String userName;
     public String suc;
+    public String password;
     public String keyCode;
 
     public User(){
 
     }
 
-    public User(String userName, String suc, String keyCode) {
+    public User(String userName, String suc, String keyCode, String password) {
         this.userName = userName;
         this.suc = suc;
         this.keyCode = keyCode;
+        this.password = password;
     }
 
     public String getUserName() {
@@ -30,6 +32,14 @@ public class User {
 
     public String getKeyCode() {
         return this.keyCode;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setUserName(String userName) {

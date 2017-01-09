@@ -5,12 +5,6 @@ b
 2src/main/java/com/lux/authentication/SaveData.java,6/0/6000f0880d4e14097564a90b5da14472b9e60e0c
 d
 4src/main/java/com/lux/authentication/model/User.java,7/3/730fc571863b4acc4f86b25258da7079742c00a8
-g
-7src/main/java/com/lux/authentication/model/Message.java,7/2/72ed856aecffedbd492ab57b1f7170f95b3b13ed
-w
-Gsrc/main/java/com/lux/authentication/jaxrs/resource/PersonResource.java,3/4/346dddf3dcd9de0492a1e9596b577a524ff55866
-x
-Hsrc/main/java/com/lux/authentication/jaxrs/resource/MessageResource.java,0/e/0e31a855b2bd1c62a983091c94edc2ecd7c2d11d
 }
 Msrc/main/java/com/lux/authentication/jaxrs/application/ApplicationConfig.java,0/0/004e5302c04361e0a7dd7b35675b2e42e4b9e305
 I

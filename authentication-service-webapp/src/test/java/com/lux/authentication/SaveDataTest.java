@@ -9,6 +9,9 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -17,6 +20,8 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class SaveDataTest {
 
     private HttpServer server;
@@ -52,7 +57,7 @@ public class SaveDataTest {
 
     @Test
     public void testSaveUser() {
-        User user = new User("Edgar","1234", "09832423");
+        User user = new User("Edgar","1234", "09832423", "123456");
         Response responseMsg = target.path("userauth/save")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(user));
