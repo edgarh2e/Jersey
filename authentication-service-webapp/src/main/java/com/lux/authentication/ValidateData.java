@@ -14,7 +14,7 @@ public class ValidateData {
     @Path("/validate")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    @Cacheable(value = "validateTokenCache")
+    @Cacheable(value = "validateTokenCache", key = "T(com.lux.authentication.model.User).hash(#userName, #suc, #password)")
     public Response validateToken(User user) {
         System.out.println("Cache");
         User userResponse =  new User(user.getUserName(), user.getSuc(),

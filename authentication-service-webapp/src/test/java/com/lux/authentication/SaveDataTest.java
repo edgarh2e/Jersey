@@ -70,6 +70,7 @@ public class SaveDataTest {
         User user = new User();
         user.setUserName("Edgar");
         user.setSuc("1234");
+        user.setPassword("123456");
         Response responseMsg = target.path("userauth/validate")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(user));
