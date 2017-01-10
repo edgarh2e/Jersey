@@ -1,7 +1,6 @@
 package com.lux.authentication;
 
 import com.lux.authentication.model.Usuario;
-import org.springframework.cache.annotation.Cacheable;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

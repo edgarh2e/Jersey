@@ -1,7 +1,0 @@
-com/lux/authentication/services/UsuarioService.class
-com/lux/authentication/jaxrs/provider/ObjectMapperProvider.class
-com/lux/authentication/model/Usuario.class
-com/lux/authentication/services/UsuarioServiceImpl.class
-com/lux/authentication/ValidarDatosUsuario.class
-com/lux/authentication/GuardarDatosUsuario.class
-com/lux/authentication/jaxrs/application/ApplicationConfig.class

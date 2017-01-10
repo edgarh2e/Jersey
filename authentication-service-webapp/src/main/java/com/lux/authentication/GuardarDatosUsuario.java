@@ -23,7 +23,6 @@ public class GuardarDatosUsuario {
 
     @POST
     @Path("/guardarDatosUsuario")
-    @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
     public Response guardarDatos() {
         Usuario usuario = new Usuario(this.usuario, this.sucursal, this.password, this.keyCode);
