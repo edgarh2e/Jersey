@@ -21,7 +21,7 @@
             statistics="true">
     </defaultCache>
 
-    <cache name="validateTokenCache"
+    <cache name="validarDatosUsuario"
            maxElementsInMemory="10000"
            eternal="false"
            timeToIdleSeconds="0"

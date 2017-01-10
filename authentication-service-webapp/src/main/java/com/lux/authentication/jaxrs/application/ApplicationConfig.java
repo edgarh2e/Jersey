@@ -1,9 +1,9 @@
 package com.lux.authentication.jaxrs.application;
 
-import com.lux.authentication.SaveData;
-import com.lux.authentication.ValidateData;
+import com.lux.authentication.GuardarDatosUsuario;
+import com.lux.authentication.ValidarDatosUsuario;
 import com.lux.authentication.jaxrs.provider.ObjectMapperProvider;
-import com.lux.authentication.model.User;
+import com.lux.authentication.model.Usuario;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("/service")
+@ApplicationPath("/servicios")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -32,9 +32,9 @@ public class ApplicationConfig extends Application {
         
         //instead let's do it manually:
         resources.add(ObjectMapperProvider.class);
-        resources.add(User.class);
-        resources.add(SaveData.class);
-        resources.add(ValidateData.class);
+        resources.add(Usuario.class);
+        resources.add(GuardarDatosUsuario.class);
+        resources.add(ValidarDatosUsuario.class);
         //==> we could also choose packages, see below getProperties()
         
         System.out.println("REST configuration ended successfully.");
