@@ -24,9 +24,8 @@ public class ValidarDatosUsuario {
     @HeaderParam("password")
     private String password;
 
-    @POST
+    @GET
     @Path("/validarDatosUsuario")
-    @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
     public Response validarDatos() {
         Usuario usuario = new Usuario();
@@ -34,6 +33,6 @@ public class ValidarDatosUsuario {
         usuario.setSucursal(this.sucursal);
         usuario.setPassword(this.password);
         Respuesta respuesta = DatosUsuario.validarDatos(KeyUtil.generadorDeLlaveMapa(usuario));
-        return Response.status(respuesta.getCodigo()).entity(respuesta.getDatosUsuario()).build();
+        return respuesta.generarResponse();
     }
 }

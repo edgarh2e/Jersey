@@ -1,4 +1,5 @@
 com/lux/authentication/services/GuardarDatosUsuario.class
+com/lux/authentication/jaxrs/application/CORSFilter.class
 com/lux/authentication/util/EstatusUtil.class
 com/lux/authentication/exception/ServiceException.class
 com/lux/authentication/model/Estatus.class
