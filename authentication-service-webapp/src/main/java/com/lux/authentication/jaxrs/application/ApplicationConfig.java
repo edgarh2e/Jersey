@@ -1,7 +1,7 @@
 package com.lux.authentication.jaxrs.application;
 
-import com.lux.authentication.GuardarDatosUsuario;
-import com.lux.authentication.ValidarDatosUsuario;
+import com.lux.authentication.services.GuardarDatosUsuario;
+import com.lux.authentication.services.ValidarDatosUsuario;
 import com.lux.authentication.jaxrs.provider.ObjectMapperProvider;
 import com.lux.authentication.model.Usuario;
 
