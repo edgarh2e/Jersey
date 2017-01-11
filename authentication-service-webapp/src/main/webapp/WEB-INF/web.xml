@@ -18,19 +18,16 @@
   <listener>
     <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
   </listener>
-
-  <servlet>
-    <servlet-name>CORS Filter</servlet-name>
-    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
-    <init-param>
-      <param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
-      <param-value>com.lux.authentication.jaxrs.application.CORSFilter</param-value>
-    </init-param>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CORS Filter</servlet-name>
-    <url-pattern>/*</url-pattern>
-  </servlet-mapping>
+  
+  <filter>
+	<filter-name>CORS</filter-name>
+	<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/*</url-pattern>
+  </filter-mapping>
 
   <session-config>
     <session-timeout>30</session-timeout>
