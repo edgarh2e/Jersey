@@ -3,11 +3,14 @@ package com.lux.authentication;
 import com.lux.authentication.data.DatosUsuario;
 import com.lux.authentication.model.Respuesta;
 import com.lux.authentication.model.Usuario;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import static junit.framework.Assert.*;
 
 public class DatosUsuarioTest {
+
+    private static Logger LOG = Logger.getLogger(DatosUsuarioTest.class);
 
     @Test
     public void testDatosUsuario() {
@@ -23,8 +26,7 @@ public class DatosUsuarioTest {
         usuario.setSucursal("12047");
         usuario.setUsuario("1550");
         Respuesta respuesta = DatosUsuario.guardarDatos("12345",usuario);
-        assertEquals("200",respuesta.getCodigo().toString());
-
+        assertEquals("200",respuesta.getCodigo().toString());;
         respuesta = DatosUsuario.validarDatos("12345");
         System.out.print(respuesta.getCodigo());
         assertEquals("200",respuesta.getCodigo().toString());

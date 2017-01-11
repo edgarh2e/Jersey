@@ -4,12 +4,15 @@ import com.lux.authentication.exception.ServiceException;
 import com.lux.authentication.model.CodigosEnum;
 import com.lux.authentication.model.Respuesta;
 import com.lux.authentication.model.Usuario;
+import org.apache.log4j.Logger;
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DatosUsuario implements Serializable {
+
+    private static Logger LOG = Logger.getLogger(DatosUsuario.class);
 
     private static final long serialVersionUID = -1093810940935189395L;
 
@@ -30,7 +33,8 @@ public class DatosUsuario implements Serializable {
         try {
             return datosUsuario.leerDatosDeUsuario(llave);
         } catch (ServiceException serviceExcp) {
-            return new Respuesta(serviceExcp.getEstatus().getCodigo());
+            LOG.error("Error: ",serviceExcp);
+            return new Respuesta(serviceExcp.getEstatus().getCodigo(), new Usuario());
         }
     }
 
@@ -40,6 +44,7 @@ public class DatosUsuario implements Serializable {
             datosUsuario.escribirDatosDeUsuario(llave, usuario);
             return new Respuesta(CodigosEnum.CODIGO_200.getId());
         } catch (ServiceException serviceExcp) {
+            LOG.error("Error: ",serviceExcp);
             return new Respuesta(serviceExcp.getEstatus().getCodigo());
         }
     }
