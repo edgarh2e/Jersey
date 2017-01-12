@@ -32,7 +32,7 @@ public class GuardarDatosUsuario {
     @Produces({MediaType.APPLICATION_JSON})
     public Response guardarDatos() {
         Usuario usuario = new Usuario(this.usuario, this.sucursal, this.password, this.keyCode);
-        LOG.info("USuario: "+usuario.toString());
+        LOG.info("Usuario: "+usuario.toString());
         Respuesta respuesta = DatosUsuario.guardarDatos(KeyUtil.generadorDeLlaveMapa(usuario), usuario);
         return respuesta.generarResponse();
     }
