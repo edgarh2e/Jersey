@@ -26,13 +26,17 @@ public class GuardarDatosUsuario {
 
     @HeaderParam("keyCode")
     private String keyCode;
+    
+    @HeaderParam("perfil")
+    private String perfil;
 
     @GET
     @Path("/guardarDatosUsuario")
     @Produces({MediaType.APPLICATION_JSON})
+   
     public Response guardarDatos() {
-        Usuario usuario = new Usuario(this.usuario, this.sucursal, this.password, this.keyCode);
-        LOG.info("USuario: "+usuario.toString());
+        Usuario usuario = new Usuario(this.usuario, this.sucursal, this.password, this.keyCode, this.perfil);
+        LOG.info("Usuario: " + usuario.toString());
         Respuesta respuesta = DatosUsuario.guardarDatos(KeyUtil.generadorDeLlaveMapa(usuario), usuario);
         return respuesta.generarResponse();
     }
