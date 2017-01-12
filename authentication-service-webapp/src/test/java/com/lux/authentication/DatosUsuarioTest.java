@@ -25,6 +25,7 @@ public class DatosUsuarioTest {
         usuario.setPassword("123456");
         usuario.setSucursal("12047");
         usuario.setUsuario("1550");
+        usuario.setPerfil("VENDEDOR");
         Respuesta respuesta = DatosUsuario.guardarDatos("12345",usuario);
         assertEquals("200",respuesta.getCodigo().toString());;
         respuesta = DatosUsuario.validarDatos("12345");

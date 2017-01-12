@@ -10,16 +10,18 @@ public class Usuario {
     public String sucursal;
     public String password;
     public String keyCode;
+    public String perfil;
 
     public Usuario(){
 
     }
 
-    public Usuario(String usuario, String sucursal, String password, String keyCode) {
+    public Usuario(String usuario, String sucursal, String password, String keyCode, String perfil) {
         this.usuario = usuario;
         this.sucursal = sucursal;
         this.password = password;
         this.keyCode = keyCode;
+        this.perfil = perfil;
     }
 
     public String getUsuario() {
@@ -38,7 +40,11 @@ public class Usuario {
         return password;
     }
 
-    public void setPassword(String password) {
+    public String getPerfil() {
+		return perfil;
+	}
+
+	public void setPassword(String password) {
         this.password = password;
     }
 
@@ -54,11 +60,16 @@ public class Usuario {
         this.keyCode = keyCode;
     }
 
-    @Override
+    public void setPerfil(String perfil) {
+		this.perfil = perfil;
+	}
+
+	@Override
     public String toString() {
         return new StringBuilder("user: ").append(this.getUsuario())
-                .append(" sucrsal: ").append(this.getSucursal())
-                .append(" keyCode: ").append(this.getKeyCode()).toString();
+                .append(" sucursal: ").append(this.getSucursal())
+                .append(" keyCode: ").append(this.getKeyCode())
+                .append(" perfil: ").append(this.getPerfil()).toString();
     }
 
 }
